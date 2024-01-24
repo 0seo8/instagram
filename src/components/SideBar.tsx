@@ -15,7 +15,7 @@ export default function SideBar({
         {image && <Avatar image={image} />}
         <div className="ml-4">
           <p className="font-bold">{username}</p>
-          <p className="text-lg text-neutral-500 leading-4">{name}</p>
+          <p className="text-sm text-neutral-500 leading-4">{name}</p>
         </div>
       </div>
       <p className="text-sm text-neutral-500 mt-8">
