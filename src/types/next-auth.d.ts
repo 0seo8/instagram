@@ -1,13 +1,7 @@
-import NextAuth, { DefaultSession } from 'next-auth';
+import { User } from '@/model/user';
 
 declare module 'next-auth' {
   interface Session {
-    user: {
-      username: string;
-    } & DefaultSession['user'];
+    user: User;
   }
-
-  // interface NextAuthOptions {
-  //   app: Partial<PagesOptions> | undefined;
-  // }
 }
