@@ -1,7 +1,6 @@
 'use client';
 
 import useSWR from 'swr';
-import { DetailUser } from '@/model/user';
 import { SimplePost } from '@/model/post';
 
 export default function PostList() {
