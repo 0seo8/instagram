@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={openSans.className}>
       <AuthContext>
-        <body className="w-full max-w-screen-xl overflow-auto mx-auto">
+        <body className="w-full max-w-screen-xl overflow-auto max-auto">
           <header className="sticky top-0 bg-white z-10 border-b">
             <Navbar />
           </header>
