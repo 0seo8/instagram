@@ -9,6 +9,7 @@ import ActionBar from "@/components/ActionBar";
 import ModalPortal from "@/components/ui/ModalPortal";
 import PostModal from "@/components/PostModal";
 import PostDetail from "@/components/PostDetail";
+import PostUserAvatar from "@/components/PostUserAvatar";
 
 type Props = {
   post: SimplePost;
@@ -20,10 +21,7 @@ export default function PostListCard({ post, priority = false }: Props) {
   const [openModal, setOpenModal] = useState(false);
   return (
     <article className="rounded-lg shadow-md border border-gray-200">
-      <div className="flex items-center p-2">
-        <Avatar image={userImage} highlight size="medium" />
-        <span className="text-gray-900 font-bold ml-2">{username}</span>
-      </div>
+      <PostUserAvatar image={userImage} username={username} />
       <Image
         className="w-full object-cover aspect-square"
         src={image}
