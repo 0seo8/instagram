@@ -11,7 +11,7 @@ const simplePostProjection = `
   "comments": count(comments),
   "id":_id,
   "createdAt": _createdAt
-`; // (플래트닝)post.author.username -> post.username 되도록 수정
+`; // (플래트닝)posts.author.username -> posts.username 되도록 수정
 
 export async function getFollowingPostsOf(username: string) {
   return client

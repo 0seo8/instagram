@@ -6,7 +6,8 @@ import PostListCard from "@/components/PostListCard";
 import GridSpinner from "@/components/ui/GridSpinner";
 
 export default function PostList() {
-  const { data: posts, isLoading: loading } = useSWR<SimplePost[]>("/api/post");
+  const { data: posts, isLoading: loading } =
+    useSWR<SimplePost[]>("/api/posts");
   return (
     <section>
       {loading && (
