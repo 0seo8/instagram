@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@0seo8/eslint-config/next"],
+  extends: ['@0seo8/eslint-config/next'],
 };
