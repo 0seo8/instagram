@@ -1,7 +1,7 @@
-import React from "react";
-import HeartIcon from "@/components/ui/icons/HeartIcon";
-import BookmarkIcon from "@/components/ui/icons/BookmarkIcon";
-import { parseDate } from "@/util/date";
+import React from 'react';
+import HeartIcon from '@/components/ui/icons/HeartIcon';
+import BookmarkIcon from '@/components/ui/icons/BookmarkIcon';
+import { parseDate } from '@/util/date';
 
 type Props = {
   likes: string;
@@ -18,7 +18,7 @@ export default function ActionBar({ likes, username, text, createdAt }: Props) {
         <BookmarkIcon />
       </div>
       <div className="px-4 py-1">
-        <p className="text-sm font-bold mb-2">{`${likes?.length ?? 0} ${likes?.length > 1 ? "likes" : "like"}`}</p>
+        <p className="text-sm font-bold mb-2">{`${likes?.length ?? 0} ${likes?.length > 1 ? 'likes' : 'like'}`}</p>
         {text && (
           <p>
             <span className="font-bold mr-1">{username}</span>

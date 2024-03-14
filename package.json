@@ -22,7 +22,7 @@
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {
-    "@0seo8/eslint-config": "^0.0.21",
+    "@0seo8/eslint-config": "^0.0.26",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

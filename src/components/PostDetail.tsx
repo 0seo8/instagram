@@ -1,11 +1,12 @@
-import React from "react";
-import { FullPost, SimplePost } from "@/model/post";
-import userSWR from "swr";
-import Image from "next/image";
-import PostUserAvatar from "@/components/PostUserAvatar";
-import ActionBar from "@/components/ActionBar";
-import CommentForm from "@/components/CommentForm";
-import Avatar from "@/components/Avatar";
+import React from 'react';
+import { FullPost, SimplePost } from '@/model/post';
+import userSWR from 'swr';
+
+import Image from 'next/image';
+import PostUserAvatar from '@/components/PostUserAvatar';
+import ActionBar from '@/components/ActionBar';
+import CommentForm from '@/components/CommentForm';
+import Avatar from '@/components/Avatar';
 
 type Props = {
   post: SimplePost;
@@ -37,7 +38,7 @@ export default function PostDetail({ post }: Props) {
                 <li key={index} className="flex items-center mb-1">
                   <Avatar
                     image={image}
-                    size={"small"}
+                    size="small"
                     highlight={commentUsername === username}
                   />
                   <div className="ml-2">

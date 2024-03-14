@@ -1,15 +1,14 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { SimplePost } from "@/model/post";
-import Avatar from "@/components/Avatar";
-import Image from "next/image";
-import CommentForm from "@/components/CommentForm";
-import ActionBar from "@/components/ActionBar";
-import ModalPortal from "@/components/ui/ModalPortal";
-import PostModal from "@/components/PostModal";
-import PostDetail from "@/components/PostDetail";
-import PostUserAvatar from "@/components/PostUserAvatar";
+import React, { useState } from 'react';
+import { SimplePost } from '@/model/post';
+import Image from 'next/image';
+import CommentForm from '@/components/CommentForm';
+import ActionBar from '@/components/ActionBar';
+import ModalPortal from '@/components/ui/ModalPortal';
+import PostModal from '@/components/PostModal';
+import PostDetail from '@/components/PostDetail';
+import PostUserAvatar from '@/components/PostUserAvatar';
 
 type Props = {
   post: SimplePost;

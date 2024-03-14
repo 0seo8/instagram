@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from 'react';
 import { ProfileUser } from '@/model/user';
 import BookmarkIcon from '@/components/ui/icons/BookmarkIcon';

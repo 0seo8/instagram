@@ -1,5 +1,7 @@
 import Carousel from 'react-multi-carousel';
+
 import 'react-multi-carousel/lib/styles.css';
+
 const responsive = {
   desk: {
     breakpoint: { max: 4000, min: 576 },

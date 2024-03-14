@@ -13,7 +13,6 @@ export default function Avatar({
 }: Props) {
   return (
     <div className={getContainerStyle(size, highlight)}>
-      {/* eslint-disable-next-line @next/next/no-img-element*/}
       <img
         className={`bg-white object-cover rounded-full ${getImageSizeStyle(size).image}`}
         alt="user profile"

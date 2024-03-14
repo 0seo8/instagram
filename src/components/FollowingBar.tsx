@@ -16,7 +16,7 @@ export default function FollowingBar() {
       {loading ? (
         <PropagateLoader size={8} color="red" />
       ) : (
-        (!users || users.length === 0) && <p>{`You don't have following`}</p>
+        (!users || users.length === 0) && <p>You don&apos;t have following</p>
       )}
       {users && users.length > 0 && (
         <ScrollableBar>
