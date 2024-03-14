@@ -34,6 +34,7 @@ export default function PostDetail({ post }: Props) {
         <ul className="border-t border-gray-100 h-full overflow-y-auto p-4 mb-1">
           {comments &&
             comments.map(
+              // eslint-disable-next-line @typescript-eslint/no-shadow
               ({ image, comment, username: commentUsername }, index) => (
                 <li key={index} className="flex items-center mb-1">
                   <Avatar

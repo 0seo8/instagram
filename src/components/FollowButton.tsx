@@ -11,11 +11,12 @@ type Props = {
 
 export default function FollowButton({ user }: Props) {
   const { username } = user;
-  const { data: loggedInUser } = useSWR<HomeUser>(`/api/me`);
+  const { data: loggedInUser } = useSWR<HomeUser>('/api/me');
 
   const showButton = loggedInUser && loggedInUser.username !== username;
   const following =
     loggedInUser &&
+    // eslint-disable-next-line no-return-assign
     loggedInUser.following.find((item) => (item.username = username));
   const text = following ? 'Unfollow' : 'Follow';
 

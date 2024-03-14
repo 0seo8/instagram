@@ -16,6 +16,7 @@ export default function PostModal({ onClose, children }: Props) {
         }
       }}
     >
+      {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <button
         className="fixed top-0 right-0 p-8 text-white"
         onClick={() => onClose()}

@@ -1,3 +1,5 @@
+import React from 'react';
+
 type AvatarSize = 'small' | 'medium' | 'large' | 'xlarge';
 
 type Props = {
@@ -13,6 +15,7 @@ export default function Avatar({
 }: Props) {
   return (
     <div className={getContainerStyle(size, highlight)}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className={`bg-white object-cover rounded-full ${getImageSizeStyle(size).image}`}
         alt="user profile"
@@ -46,7 +49,7 @@ function getImageSizeStyle(size: AvatarSize): ImageSizeStyle {
     case 'large':
       return {
         container: 'w-[68px] h-[68px]',
-        image: 'w-16 h-16' + ' p-[0.15rem]',
+        image: 'w-16 h-16 p-[0.15rem]',
       };
     case 'xlarge':
       return {

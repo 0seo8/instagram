@@ -1,7 +1,8 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { getPost } from "@/service/post";
-import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from 'next-auth';
+
+import { getPost } from '@/service/post';
+import { NextRequest, NextResponse } from 'next/server';
+import { authOptions } from '@/app/api/auth/[...nextauth]';
 
 type Context = {
   params: { id: string };
@@ -12,7 +13,7 @@ export async function GET(request: NextRequest, context: Context) {
   const user = session?.user;
 
   if (!user) {
-    return new Response("Authentication Error", { status: 401 });
+    return new Response('Authentication Error', { status: 401 });
   }
 
   return getPost(context.params.id) //
