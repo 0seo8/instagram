@@ -10,9 +10,6 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_OAUTH_SECRET || '',
     }),
   ],
-  pages: {
-    signIn: '/auth/signin',
-  },
   callbacks: {
     async signIn({ user: { id, name, image, email } }) {
       if (!email) {
@@ -44,6 +41,9 @@ export const authOptions: NextAuthOptions = {
       }
       return token;
     },
+  },
+  pages: {
+    signIn: '/auth/signin',
   },
 };
 
