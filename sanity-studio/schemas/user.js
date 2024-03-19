@@ -54,7 +54,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{type: 'user'}],
+          to: [{type: 'post'}],
         },
       ],
       validation: (Rule) => Rule.unique(),
