@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 
 import { dislikePost, likePost } from '@/service/post';
-import { authOptions } from '../auth/[...nextauth]';
+import { authOptions } from '../auth/[...nextauth]/route';
 
 export async function PUT(req: NextRequest) {
   const session = await getServerSession(authOptions);

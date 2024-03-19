@@ -12,6 +12,6 @@ type Props = {
   color?: string;
 };
 
-export default function GridSpinner({ color }: Props) {
+export default function GridSpinner({ color = 'red' }: Props) {
   return <GridLoader color={color} />;
 }

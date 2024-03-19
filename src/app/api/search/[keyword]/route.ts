@@ -4,7 +4,7 @@ import { searchUsers } from '@/service/user';
 type Context = {
   params: { keyword: string };
 };
-
-export async function GET(_: NextRequest, { params: { keyword } }: Context) {
-  return searchUsers(keyword).then((data) => NextResponse.json(data));
+export async function GET(_: NextRequest, context: Context) {
+  return searchUsers(context.params.keyword) //
+    .then((data) => NextResponse.json(data));
 }
