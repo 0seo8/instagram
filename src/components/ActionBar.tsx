@@ -11,22 +11,21 @@ import useMe from '@/hooks/me';
 
 type Props = {
   post: SimplePost;
+  children?: React.ReactNode;
 };
 
-export default function ActionBar({ post }: Props) {
-  const { likes, username, text, createdAt, id } = post;
+export default function ActionBar({ post, children }: Props) {
+  const { likes, createdAt, id } = post;
   const { setLike } = usePosts();
   const { user, setBookmark } = useMe();
 
   const liked = user ? likes.includes(user.username) : false;
   const bookmarked = user?.bookmarks.includes(id) ?? false;
-  const handleLike = (like: boolean) => {
+  const handleLike = (like: boolean) =>
     user && setLike(post, user.username, like);
-  };
 
-  const handleBookmark = (bookmark: boolean) => {
+  const handleBookmark = (bookmark: boolean) =>
     user && setBookmark(id, bookmark);
-  };
 
   return (
     <>
@@ -46,12 +45,7 @@ export default function ActionBar({ post }: Props) {
       </div>
       <div className="px-4 py-1">
         <p className="text-sm font-bold mb-2">{`${likes?.length ?? 0} ${likes?.length > 1 ? 'likes' : 'like'}`}</p>
-        {text && (
-          <p>
-            <span className="font-bold mr-1">{username}</span>
-            {text}
-          </p>
-        )}
+        {children}
         <p className="text-xs text-neutral-500 uppercase my-2">
           {parseDate(createdAt)}
         </p>
