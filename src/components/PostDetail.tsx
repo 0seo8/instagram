@@ -1,12 +1,13 @@
 import React from 'react';
-import { FullPost, SimplePost } from '@/model/post';
-import userSWR from 'swr';
+import { SimplePost } from '@/model/post';
 
 import Image from 'next/image';
 import PostUserAvatar from '@/components/PostUserAvatar';
 import ActionBar from '@/components/ActionBar';
 import CommentForm from '@/components/CommentForm';
 import Avatar from '@/components/Avatar';
+import useFullPost from '@/hooks/post';
+import useMe from '@/hooks/me';
 
 type Props = {
   post: SimplePost;
@@ -14,10 +15,13 @@ type Props = {
 
 export default function PostDetail({ post }: Props) {
   const { id, username, userImage, image, createdAt, likes } = post;
-  const { data } = userSWR<FullPost>(`/api/posts/${id}`);
+  const { post: data, postComment } = useFullPost(id);
   const comments = data?.comments;
-
-  const handlePostComment = (comment: string) => {};
+  const { user } = useMe();
+  const handlePostComment = (comment: string) => {
+    user &&
+      postComment({ comment, username: user.username, image: user.image });
+  };
   return (
     <section className="flex w-full h-full">
       <div className="relative basis-3/5">
