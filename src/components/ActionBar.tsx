@@ -29,9 +29,8 @@ export default function ActionBar({ post, children, onComment }: Props) {
   const handleBookmark = (bookmark: boolean) =>
     user && setBookmark(id, bookmark);
 
-  const handleComment = (comment: string) => {
+  const handleComment = (comment: string) =>
     user && onComment({ comment, username: user.username, image: user.image });
-  };
 
   return (
     <>

@@ -19,7 +19,7 @@ export default function PostGridCard({ post, priority = false }: Props) {
     if (!session?.user) {
       return signIn();
     }
-    setOpenModal(true);
+    return setOpenModal(true);
   };
   return (
     <div className="relative w-full aspect-square">
