@@ -5,7 +5,7 @@ type CacheKeyValue = {
 };
 
 export const CacheKeyContext = createContext<CacheKeyValue>({
-  postsKey: '/pai/posts',
+  postsKey: '/api/posts',
 });
 
 export const useCacheKeys = () => useContext(CacheKeyContext);
